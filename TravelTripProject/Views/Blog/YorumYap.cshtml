@@ -1,0 +1,15 @@
+﻿<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
+<div class="content-form">
+    <h3>Bir Yorum Bırak</h3>
+    <form method="post">
+        <input type="hidden" placeholder="ID" name="Blogid" value="@ViewBag.deger" required />
+        <input type="text" placeholder="Kullanıcı Adı" name="KullaniciAdi" required />
+        <input type="text" placeholder="Email Adresi" name="Mail" required />
+        <textarea placeholder="Yorum" name="Yorum"></textarea>
+        <input type="submit" value="Gönder"/>
+    </form>
+</div>

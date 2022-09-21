@@ -1,0 +1,27 @@
+﻿@model TravelTripProject.Models.Siniflar.iletisim
+@{
+    ViewBag.Title = "iletisimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Gelen İletiler</h2>
+
+@using (Html.BeginForm("IletisimGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.ID)
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.AdSoyad)
+    @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Mail)
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Konu)
+    @Html.TextAreaFor(x => x.Konu, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Mesaj)
+    @Html.TextAreaFor(x => x.Mesaj, 15, 1, new { @class = "form-control" })
+    <button class="btn btn-warning">Düzenle</button>
+}
+

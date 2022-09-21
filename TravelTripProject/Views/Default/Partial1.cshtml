@@ -1,0 +1,44 @@
+﻿@using TravelTripProject.Models.Siniflar
+@model List<Blog>
+
+<div class="con-bot">
+    @{ int a = 0;}
+    @foreach (var x in Model)
+    {
+        a++;
+        var ss = "left";
+        if (a == 3)
+        {
+            ss = "right";
+        }
+        else if(a>3)
+        {
+            break;
+        }
+
+    <div class="@ss">
+        <div class="bot-left">
+            <img src="@x.BlogImage" alt="" style="width:400px;height:150px;"/>
+        </div>
+        <div class="left-text">
+            <h4 style="max-height:15px;">@x.Baslik</h4>
+            <span class="doller">@x.Tarih.ToString("dd:MM:yyyy")</span>
+            <p>@x.Aciklama.Substring(0, 80)...</p>
+            <p><a href="/Blog/BlogDetay/@x.ID"><span class="read">Devamını Oku >></span></a></p>
+        </div>
+    </div>
+    }
+    @*<div class="right">
+            <div class="bot-left">
+                <img src="~/web/images/pic2.jpg" alt="" />
+            </div>
+            <div class="left-text">
+
+                <h4>Lorem ipsum dolor sit amet, conte adipiscing elit dolor sit amet</h4>
+                <span class="doller">$924.99</span>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismo</p>
+                <p><a href="#"><span class="read">Read More >></span></a></p>
+            </div>
+        </div>*@
+    <div class="clear"></div>
+</div>

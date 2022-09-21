@@ -1,0 +1,68 @@
+﻿@model TravelTripProject.Models.Siniflar.iletisim
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+</script>
+
+<style>
+    .butonum {
+        background-color: #9e3357;
+        border-radius: 8px;
+        border-style: none;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        height: 40px;
+        line-height: 20px;
+        list-style: none;
+        margin: 0;
+        outline: none;
+        padding: 10px 16px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        transition: color 100ms;
+        vertical-align: baseline;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+</style>
+<div class="contact">
+    <div class="wrap">
+        <div class="contact-top">
+            <h3>Contact Information</h3>
+            <p> Benimle iletişim kurmak için aşagıda bulunan formu doldurabilirsin. unutma! eksik doldurursan sana ulaşmam zorlaşabilir! lütfen doğru ve eksiksiz bir şekilde doldur.</p>
+        </div>
+
+        <form method="post" class="form" id="form1">
+            <label>Ad Soyad</label>
+            @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control" })
+            <br />
+            <label>Mail</label>
+            @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+            <br />
+            <label>Konu</label>
+            @Html.TextBoxFor(x => x.Konu, new { @class = "form-control" })
+            <br />
+            <div class="form1">
+                @Html.LabelFor(x=>x.Mesaj)
+                @Html.TextAreaFor(x => x.Mesaj, new { @class = "form-control" })
+            </div>
+            <button class="butonum" onclick="alert('Mesajınız Gonderilmistir!')">Mesaj gonder</button>
+        </form>
+        <div class="clear"></div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+
