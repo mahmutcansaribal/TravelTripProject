@@ -64,5 +64,5 @@
 
 *.js linguist-detectable=false
 *.css linguist-detectable=false
-*.html linguist-detectable=true
+*.html linguist-detectable=false
 
